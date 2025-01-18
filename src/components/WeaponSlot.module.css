@@ -1,0 +1,47 @@
+.weaponSlot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #222;
+  border-radius: 4px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.weaponImage {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.weaponName {
+  font-family: "OptimusPrinceps", sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.handSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.handTitle {
+  font-family: "OptimusPrinceps", sans-serif;
+  color: chocolate;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+:global(body.light-mode) .weaponSlot {
+  background-color: #7f7f7f;
+}

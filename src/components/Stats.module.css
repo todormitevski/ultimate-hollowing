@@ -1,0 +1,80 @@
+.statSection {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 2rem;
+  color: #ffffff;
+  font-family: "OptimusPrinceps", sans-serif;
+  width: 100%;
+  min-height: 200px;
+  max-width: 340px;
+}
+
+.statSection table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+.statSection th {
+  text-align: left;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #3a3a3a;
+  color: chocolate;
+  font-weight: normal;
+  font-size: 1.2rem;
+  transition: border-bottom 0.3s;
+}
+
+.statSection td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #3a3a3a;
+  vertical-align: middle;
+  transition: border-bottom 0.3s;
+}
+
+.statSection tr:last-child td {
+  border-bottom: none;
+}
+
+.statSection td:nth-child(2),
+.statSection td:nth-child(3),
+.statSection th:nth-child(2),
+.statSection th:nth-child(3) {
+  text-align: center;
+  width: 80px;
+}
+
+.soulLevel {
+  font-family: "OptimusPrinceps", sans-serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.soulLevel::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, chocolate, transparent);
+}
+
+.statSection tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:global(body.light-mode) .statSection th {
+  border-bottom-color: #ddd;
+}
+
+:global(body.light-mode) .statSection td {
+  border-bottom-color: #ddd;
+}

@@ -1,0 +1,120 @@
+.header {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  width: 100%;
+  padding: 0.2rem 0;
+  font-family: "OptimusPrinceps", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header.lightMode {
+  background-color: #f0f0f0;
+  color: #2a2a2a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSection,
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo img {
+  max-width: 3.5rem;
+  height: auto;
+}
+
+.leftNav ul,
+.rightSection .rightNav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.leftNav a,
+.rightSection a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.leftNav a:hover,
+.rightSection a:hover,
+.active {
+  color: chocolate !important;
+}
+
+.sunModeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sunModeIcon {
+  width: 32px;
+  height: 32px;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .leftNav ul,
+  .rightSection .rightNav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+:global(body.light-mode) {
+  background-color: #f0f0f093;
+  color: #2a2a2a;
+}
