@@ -2,15 +2,15 @@ import { ReactNode, useEffect, useState } from "react";
 import CharacterClass from "../components/CharacterClass";
 import Stats from "../components/Stats.js";
 import Weapons from "../components/Weapons.tsx";
+import Infusions from "../components/Infusions.tsx";
 
-import { RandomData } from "../types/types.ts";
-
-import { CHARACTER_CLASSES, WEAPON_TYPES, INFUSIONS } from "../data.ts";
+import { CHARACTER_CLASSES, WEAPON_TYPES, INFUSIONS } from "../data/index.ts";
 
 import randomizeData from "../util/randomize.ts";
 
 import classes from "./Home.module.css";
-import Infusions from "../components/Infusions.tsx";
+
+import { RandomData } from "../types/types.ts";
 
 type Props = {
   sl1: boolean;
@@ -50,7 +50,6 @@ export default function Home({ sl1 }: Props) {
     <div className={classes.homeContainer}>
       <div className={classes.leftSide}>
         <CharacterClass
-          key={rands.characterClass.id}
           name={rands.characterClass.name}
           imgUrl={rands.characterClass.image.src}
           imgAlt={rands.characterClass.image.alt}
