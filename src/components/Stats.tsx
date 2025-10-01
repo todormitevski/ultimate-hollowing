@@ -25,7 +25,7 @@ export default function Stats({ baseStats, randStats, sl1 }: Props) {
         </thead>
         <tbody>
           {baseStats.slice(1).map((stat, index) => (
-            <tr>
+            <tr key={stat.name}>
               <td>
                 <div style={{ display: "flex", gap: 5 }}>
                   <img src={stat.icon} alt={stat.name} />
@@ -33,7 +33,9 @@ export default function Stats({ baseStats, randStats, sl1 }: Props) {
                 </div>
               </td>
               <td>{stat.value}</td>
-              <td style={{ fontWeight: "bold", fontSize: 22, color: "#c4ad2b" }}>
+              <td
+                style={{ fontWeight: "bold", fontSize: 22, color: "#c4ad2b" }}
+              >
                 {sl1 ? stat.value : randStats[index + 1].value}
               </td>
             </tr>

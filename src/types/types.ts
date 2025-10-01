@@ -15,11 +15,13 @@ export type CharacterClass = {
 };
 
 export type WeaponType = {
+  id: string;
   name: string;
   image: string;
 };
 
 export type Infusion = {
+  id: string;
   name: string;
   image: string | undefined;
 };

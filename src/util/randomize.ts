@@ -9,7 +9,7 @@ function randomizeClass(sl1: boolean) {
 
 function randomizeStats(characterClass: CharacterClass) {
   // shallow copy
-  let randStats = characterClass.stats.map((stat) => ({ ...stat }));
+  const randStats = characterClass.stats.map((stat) => ({ ...stat }));
   const level = characterClass.stats[0].value;
   let levelsLeft = 120 - level;
 
