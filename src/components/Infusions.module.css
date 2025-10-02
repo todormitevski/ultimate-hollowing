@@ -7,3 +7,13 @@
   padding-left: 3.4rem;
   padding-right: 3.4rem;
 }
+
+@media (max-width: 768px) {
+  .infusionsContainer {
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+  }
+}

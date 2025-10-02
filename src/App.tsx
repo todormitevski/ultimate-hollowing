@@ -1,13 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
-import { lazy, Suspense } from "react";
-// import Error from "./pages/Error";
-// import Home from "./pages/Home";
-// import Rules from "./pages/Rules";
-// import About from "./pages/About";
+import { LoadingIndicator } from "./components/LoadingIndicator";
+import { /*lazy,*/ Suspense } from "react";
+// const Home = lazy(() => import("./pages/Home"));
+// const Error = lazy(() => import("./pages/Error"));
+// const Rules = lazy(() => import("./pages/Rules"));
+// const About = lazy(() => import("./pages/About"));
 
-const Home = lazy(() => import("./pages/Home"));
-const loadingDiv = <div>Loading...</div>;
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import Rules from "./pages/Rules";
+import About from "./pages/About";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,14 +19,14 @@ function App() {
       element: <RootLayout />,
       errorElement: (
         <RootLayout>
-          <Home sl1={false} />
+          <Error />
         </RootLayout>
       ),
       children: [
         {
           index: true,
           element: (
-            <Suspense fallback={loadingDiv}>
+            <Suspense fallback={<LoadingIndicator />}>
               <Home sl1={false} />
             </Suspense>
           ),
@@ -31,25 +34,24 @@ function App() {
         {
           path: "soul-level-one",
           element: (
-            <Suspense fallback={loadingDiv}>
+            <Suspense fallback={<LoadingIndicator />}>
               <Home sl1={true} />
             </Suspense>
           ),
         },
-        // TODO: rules & about pages
         {
           path: "rules",
           element: (
-            <Suspense fallback={loadingDiv}>
-              <Home sl1={false} />
+            <Suspense fallback={<LoadingIndicator />}>
+              <Rules />
             </Suspense>
           ),
         },
         {
           path: "about",
           element: (
-            <Suspense fallback={loadingDiv}>
-              <Home sl1={false} />
+            <Suspense fallback={<LoadingIndicator />}>
+              <About />
             </Suspense>
           ),
         },
