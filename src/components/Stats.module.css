@@ -78,3 +78,22 @@
 :global(body.light-mode) .statSection td {
   border-bottom-color: #ddd;
 }
+
+@media (max-width: 768px) {
+  .statSection {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .soulLevel {
+    font-size: 1.5rem;
+  }
+
+  .statSection table {
+    font-size: 1rem;
+  }
+
+  .statSection th {
+    font-size: 1.1rem;
+  }
+}

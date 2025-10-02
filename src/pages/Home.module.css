@@ -1,5 +1,6 @@
 .homeContainer {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -12,12 +13,30 @@
 }
 
 .rightSide {
-  flex: 1;
   height: 100%;
+  max-height: 1163px;
+  flex: 1;
   background-color: #2a2a2a;
   border: 1px solid #3a3a3a;
   border-radius: 4px;
   padding: 2rem;
   color: #ffffff;
   font-family: "OptimusPrinceps", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .leftSide {
+    flex-direction: row;
+  }
+
+  .rightSide {
+    padding: 1rem;
+  }
 }

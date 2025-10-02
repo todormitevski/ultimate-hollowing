@@ -26,3 +26,17 @@
   gap: 3rem;
   padding: 1rem;
 }
+
+@media (max-width: 768px) {
+  .weaponsMain {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .weaponsTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
