@@ -26,17 +26,24 @@
 
 @media (max-width: 768px) {
   .homeContainer {
+    max-width: 100%;
+    padding: 0 0.5rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 0 1rem;
   }
 
   .leftSide {
+    width: 100%;
+    max-width: 368px;
     flex-direction: row;
+    gap: 0.8rem;
+    justify-content: center;
   }
 
   .rightSide {
-    padding: 1rem;
+    width: 100%;
+    max-width: 368px;
+    padding: 0.8rem 0.6rem;
   }
 }

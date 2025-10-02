@@ -49,23 +49,37 @@
 
 @media (max-width: 768px) {
   .handSection {
-    max-width: 100%;
+    width: 160px;
+    max-width: 160px;
+    min-width: 160px;
   }
 
   .weaponSlot {
-    min-height: 280px;
-    padding: 0.8rem;
+    min-height: 200px;
+    max-height: 200px;
+    padding: 0.6rem;
+    overflow: hidden;
   }
 
-  .imageContainer {
-    max-height: 200px;
+  .weaponImage {
+    width: auto;
+    max-height: 120px;
   }
 
   .weaponName {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .handTitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
   }
 }

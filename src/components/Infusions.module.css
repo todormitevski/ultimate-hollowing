@@ -10,10 +10,10 @@
 
 @media (max-width: 768px) {
   .infusionsContainer {
+    width: 100%;
+    padding: 0.5rem 0;
     flex-direction: row;
-    gap: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
   }
 }
