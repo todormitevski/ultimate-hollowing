@@ -27,22 +27,24 @@ export default function Stats({ baseStats, randStats, sl1 }: Props) {
           {baseStats.slice(1).map((stat, index) => (
             <tr key={stat.name}>
               <td>
-                <div style={{ display: "flex", gap: 5 }}>
-                  <img src={stat.icon} alt={stat.name} />
+                <div className={classes.statNameContainer}>
+                  <img
+                    src={stat.icon}
+                    alt={stat.name}
+                    className={classes.statIcon}
+                  />
                   {stat.name}
                 </div>
               </td>
               <td>{stat.value}</td>
-              <td
-                style={{ fontWeight: "bold", fontSize: 22, color: "#c4ad2b" }}
-              >
+              <td className={classes.finalStatValue}>
                 {sl1 ? stat.value : randStats[index + 1].value}
               </td>
             </tr>
           ))}
           <tr>
             <td>
-              <div style={{ display: "flex", gap: 5 }}>
+              <div className={classes.statNameContainer}>
                 <img src={hollowingIcon} alt="Hollowing" />
                 Hollowing
               </div>

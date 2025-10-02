@@ -1,13 +1,30 @@
 .statSection {
-  background-color: #2a2a2a;
+  width: 100%;
+  max-width: 340px;
+  min-height: 200px;
+  padding: 2rem;
   border: 1px solid #3a3a3a;
   border-radius: 4px;
-  padding: 2rem;
   color: #ffffff;
+  background-color: #2a2a2a;
   font-family: "OptimusPrinceps", sans-serif;
-  width: 100%;
-  min-height: 200px;
-  max-width: 340px;
+}
+
+.statNameContainer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.statIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.finalStatValue {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #c4ad2b;
 }
 
 .statSection table {
@@ -81,19 +98,66 @@
 
 @media (max-width: 768px) {
   .statSection {
-    max-width: 100%;
-    padding: 1rem;
+    width: 100%;
+    max-width: 180px;
+    min-height: 320px;
+    max-height: 320px;
+    padding: 1rem 0.8rem;
+    overflow: hidden;
   }
 
   .soulLevel {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .statNameContainer {
+    gap: 3px;
+  }
+
+  .statIcon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .finalStatValue {
+    font-size: 0.8rem;
   }
 
   .statSection table {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
   }
 
   .statSection th {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
+    padding: 0.15rem 0;
+  }
+
+  .statSection td {
+    padding: 0.1rem 0;
+    font-size: 0.6rem;
+    line-height: 1.9;
+  }
+
+  .statSection td img,
+  .statSection th img {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .statSection td[style*="fontWeight"] {
+    font-size: 0.8rem !important;
+  }
+
+  .statSection td:nth-child(2),
+  .statSection td:nth-child(3),
+  .statSection th:nth-child(2),
+  .statSection th:nth-child(3) {
+    width: 30px;
+  }
+
+  .statSection td div[style*="display: flex"] {
+    gap: 3px !important; /* Override inline gap */
   }
 }
