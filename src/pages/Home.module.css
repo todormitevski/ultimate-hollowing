@@ -12,9 +12,15 @@
   gap: 2rem;
 }
 
+.classStatsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .rightSide {
   height: 100%;
-  max-height: 1163px;
+  max-height: 1255px;
   flex: 1;
   background-color: #2a2a2a;
   border: 1px solid #3a3a3a;
@@ -36,9 +42,15 @@
   .leftSide {
     width: 100%;
     max-width: 368px;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0.8rem;
     justify-content: center;
+  }
+
+  .classStatsWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
   }
 
   .rightSide {

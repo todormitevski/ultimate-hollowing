@@ -1,0 +1,64 @@
+.button {
+  width: 100%;
+  padding: 0.8rem 2rem;
+  border: 1px solid #555555;
+  border-radius: 8px;
+  position: relative;
+  color: #ffffff;
+  background-color: #2e2e2e;
+  font-size: 1.8rem;
+  font-family: "OptimusPrinceps", sans-serif;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/icons/header-icon.png");
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.button:hover::before {
+  opacity: 0.5;
+}
+
+.button:hover {
+  color: chocolate;
+  border-color: chocolate;
+  background-color: #2f2f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.buttonText {
+  position: relative;
+  z-index: 1;
+}
+
+body.light-mode .button:hover {
+  color: chocolate;
+  border-color: chocolate;
+  background-color: #c0c0c0;
+}
+
+@media (max-width: 768px) {
+  .button {
+    font-size: 1.4rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

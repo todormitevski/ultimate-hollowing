@@ -9,6 +9,7 @@ import randomizeData from "../util/randomize.ts";
 import classes from "./Home.module.css";
 
 import { RandomData } from "../types/types.ts";
+import HollowButton from "../components/HollowButton.tsx";
 
 type Props = {
   sl1: boolean;
@@ -37,21 +38,28 @@ export default function Home({ sl1 }: Props) {
     });
   }, [sl1]);
 
+  const handleHollow = () => {
+    setRands(randomizeData(sl1));
+  };
+
   return (
     <div className={classes.homeContainer}>
       {rands && (
         <>
           <div className={classes.leftSide}>
-            <CharacterClass
-              name={rands.characterClass.name}
-              imgUrl={rands.characterClass.image.src}
-              imgAlt={rands.characterClass.image.alt}
-            />
-            <Stats
-              baseStats={rands.characterClass.stats}
-              randStats={rands.stats}
-              sl1={sl1}
-            />
+            <HollowButton onClick={handleHollow} />
+            <div className={classes.classStatsWrapper}>
+              <CharacterClass
+                name={rands.characterClass.name}
+                imgUrl={rands.characterClass.image.src}
+                imgAlt={rands.characterClass.image.alt}
+              />
+              <Stats
+                baseStats={rands.characterClass.stats}
+                randStats={rands.stats}
+                sl1={sl1}
+              />
+            </div>
           </div>
           <div className={classes.rightSide}>
             <Weapons

@@ -158,6 +158,6 @@
   }
 
   .statSection td div[style*="display: flex"] {
-    gap: 3px !important; /* Override inline gap */
+    gap: 3px !important;
   }
 }

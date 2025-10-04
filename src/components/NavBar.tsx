@@ -58,7 +58,6 @@ export default function NavBar() {
         <div className={classes.rightSection}>
           <nav className={classes.rightNav}>
             <ul>
-              {/* TODO: rules & about pages */}
               <li>
                 <NavLink
                   to="/rules"
